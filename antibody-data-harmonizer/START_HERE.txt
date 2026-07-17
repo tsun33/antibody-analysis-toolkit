@@ -1,0 +1,1 @@
+Start with PROJECT_GUIDE_CN.md, then open notebooks/01_demo_pipeline.ipynb.
