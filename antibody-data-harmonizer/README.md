@@ -12,7 +12,7 @@ developability analyses.
 
 Antibody assay results and sequence annotations often arrive in separate Excel
 worksheets with inconsistent headers and identifier formats. Manual copying,
-dragging, and visual checking are slow and difficult to audit.
+dragging, and visual checking are slow and difficult to audit,especially in large dataset.
 
 This project turns that workflow into a reusable pipeline:
 
@@ -22,7 +22,8 @@ This project turns that workflow into a reusable pipeline:
 4. Export matched, unmatched, and duplicate-ID audit tables.
 5. Locate and mark a motif or regular-expression feature in sequences.
 6. Join feature results back to antibody IDs.
-7. Analyze CDR3 length against expression, HIC, Tm, or other variables.
+7. Analyze different variables correlation.
+8. Help create charts and graphs for visualizing.
 
 ## Demonstrated skills
 
@@ -77,25 +78,11 @@ py -m venv .venv
 
 ### 2. Install dependencies
 
-```bash
-python -m pip install -r requirements.txt
-```
-
 ### 3. Launch JupyterLab
-
-```bash
-jupyter lab
-```
-
-Open `notebooks/01_demo_pipeline.ipynb` and run the cells from top to bottom.
 
 ### 4. Run tests
 
-From the repository root:
 
-```bash
-python -m pytest
-```
 
 ## Core safety principle
 
@@ -115,5 +102,4 @@ candidate suggestions**. Approximate matches are never silently accepted.
 - Export a multi-sheet quality-control workbook.
 - Add interactive column mapping.
 - Support Kabat insertion labels such as `100A` and `100B`.
-- Add plots and HTML reports.
 - Build a lightweight Streamlit interface.
